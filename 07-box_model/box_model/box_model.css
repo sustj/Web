@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.box {
+  width: 400px;
+  /* height: 400px; */
+  /* [자식 높이 0, 부모 높이 X]
+  : 부모는 자식만큼 높이를 가짐
+  */
+
+  overflow : hidden;
+}
+
+#box1 {
+  background-color: #000;
+}
+
+#box2 {
+  background-color: #dd3276;
+}
+
+.box > div {
+  width: 100px;
+  height: 100px;
+  
+
+  /* [부모 고정 사이즈 < 자식 고정 사이즈] 
+  : 념침
+  < 자식 사이즈가 부모를 초과할 경우 해결 방법 >
+  1. 부모 사이즈 제거 / 부모 사이즈 up
+  2. 자식을 상대 단위로 변경
+  3. overflow : hidden;
+  */
+  
+  /* width: 50%;
+  height: 100px; */
+
+  padding: 10px;
+  /* padding은 border 안쪽에 있음 -> content 영역과 border 사이의 여백 */
+  border: 5px solid aqua;
+  /* border은 형식이 있음 -> 1. 두께 2. 스타일 3. 색상 */
+  box-sizing: border-box;
+  /* box-sizing : border-box; -> padding, border를 포함한 크기로 계산됨 */
+}
+
+
+.box > div:nth-child(1) {
+  background-color: #c2c2c2;
+}
+
+.box > div:nth-child(2) {
+  background-color: #959595;
+  margin: 10px;
+}
+
+.box > div:nth-child(3) {
+  background-color: #f04646;
+  height: 50px;
+
+  margin-left: 20px;
+  border-radius: 25px;
+}

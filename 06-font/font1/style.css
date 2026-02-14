@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 폰트 : Gowun Batang  적용 */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Batang&display=swap');
+
+.Gowun_Batang {
+  font-family: "Gowun Batang", serif;
+}
+
+
+@font-face {
+    font-family: 'YesMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+}
+
+/* [CSS 작성순서(수업 기준)-중요도 순으로 나열)] */
+/* 
+1. 위치(배치)/정렬 
+2. 사이즈/여백
+3. 폰트/컬러 관련
+4. 기타
+*/
+
+/* '*' = 전체선택자 */
+* {
+  /* 폰트 종류 */
+  font-family: "Gothic A1", sans-serif;
+}
+
+p {
+  /* 폰트 크기 */
+  font-size: 20px;
+
+  /* 행간(줄간격) */
+  line-height: 1.5;
+
+  /* 자간(한글자 사이 간격) */
+  letter-spacing: -1px;
+
+  /* 단어 사이 간격(띄어쓰기 간격) */
+  word-spacing: 2px;
+
+  /* 폰트 굵기 */
+  font-weight: 200;
+
+  /* 폰트 스타일(기울임) */
+  font-style: italic;
+
+  /* 텍스트 정렬 */
+  text-align: center;
+
+  /* 대소문자 변경 */
+  text-transform: uppercase; 
+  /* uppercase(대문자), lowercase(소문자), capitalize(단어 첫글자만 대문자) */
+  
+}
+
+
+span {
+  color : red;
+}

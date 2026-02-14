@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.box {
+  width: 500px;
+  border:3px solid red;
+}
+
+#box1 {
+  background-color: #f0f0f0;
+}
+
+#box2 {
+  background-color: #000;
+}
+
+.box > div {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.box > div:nth-child(1) {
+  /* float: left; */
+  background-color: #EE2658;
+}
+.box > div:nth-child(2) {
+  /* float: left; */
+  background-color: #3f56a6;
+}
+.box > div:nth-child(3) {
+  /* float:left; */
+  background-color: #fede12;
+}
+/* .box > div:last-child {
+  clear:both;
+} */
+
+.clearfix::after {
+  /* 가상 클래스 필수 속성 */
+  content: "";
+
+  /* 줄바꿈 되도록 설정 */
+  display: block;
+
+  /* left, right 상관없이 float 해제 */
+  clear: both;
+}

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.box {
+  width: 500px;
+  /* height: 500px; */
+  border: 3px solid red;
+  overflow: hidden;
+}
+
+#box1 {
+  background-color: #f0f0f0;
+}
+
+#box2 {
+  background-color: #000;
+}
+
+.box > div {
+  float: left; 
+  width: 100px;
+  height: 100px;
+}
+
+.box > div:nth-child(1) {
+  /* float: left; */
+  background-color: #EE2658;
+}
+
+.box > div:nth-child(2) {
+  /* float: left; */
+  background-color: #3f56a6;
+}
+
+.box > div:nth-child(3) {
+  /* float: left; */
+  background-color: #fede12;
+}
+
+/* .box > div:last-child {
+  clear: both; 
+  /* 부모가 자식을 인식하게 만들어 오류(꺠짐현상)이 없게 만드는 역할..? 
+} */
+
+
+
+/* clearfix: 보편적으로 플롯 해체 속성을 정의할 때 사용하는 임의의 클래스명 -> 부모에게 줘야 함 */
+
+/* float 적용한 태그의 부모 */
+.clearfix::after {
+
+  /* 가상 클래스 필수 속성 */
+  content: "";
+  
+  /* 줄바꿈 되도록 설정 */
+  display: block;
+
+  /* letf,right 상관없이 float 해제 */
+  clear: both;
+}

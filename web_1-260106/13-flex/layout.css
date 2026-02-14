@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* 
+[CSS 작성 순서 (수업 기준)]
+1. 위치(배치)/정렬
+2. 사이즈/여백
+3. 폰트/컬러 관련
+4. 기타
+*/
+
+* {
+  background-color: #00000010;
+  
+}
+
+
+
+.section_1 {
+  text-align: center;
+}
+.section_1 h2 {
+  margin: 50px 0 20px; /* 3자리 축약형: 상 좌우 하 */
+  font-size: 32px;
+}
+
+/* flex-container */
+.list_wrapper {
+  display: flex;
+  flex-wrap:wrap;
+
+  width: 1660px;
+
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  border: 2px solid aqua;
+}
+/* flex-item */
+.list-item {
+  /* width: 300px; */
+  width: 400px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.list-item:nth-child(4n+1) {
+  margin-left: 0;
+}
+.list-item:nth-child(-n+4) {
+  margin-top: 0;
+}
+.list-item__inner p > span {
+  color:red;
+}

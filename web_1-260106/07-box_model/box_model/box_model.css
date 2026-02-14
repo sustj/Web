@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.box {
+  width: 400px;
+  height: 200px;
+  /*
+  [자식 높이 O, 부모 높이 X]
+  : 부모는 자식만큼 높이를 가짐
+  */
+  overflow-y: scroll;
+}
+
+#box1 {
+  background-color: #000;
+}
+
+#box2 {
+  background-color: #dd3276;
+}
+
+.box > div {
+  width: 100px;
+  height: 100px;
+
+  /* width: 500px;
+  height: 500px; */
+  /* 
+  [부모 고정 사이즈 < 자식 고정 사이즈]
+  : 넘침
+  1. 부모 사이즈 제거 / 부모 사이즈 up
+  2. 자식을 상대 단위로 변경
+  3. overflow: hidden;
+  */
+  /* width: 50%;
+  height: 100px; */
+
+  padding: 10px;
+  border: 5px solid aqua;
+  box-sizing: border-box;
+}
+
+.box > div:nth-child(1) {
+  background-color: #c2c2c2;
+}
+
+.box > div:nth-child(2) {
+  margin: 10px;
+  background-color: #959595;
+}
+
+.box > div:nth-child(3) {
+  background-color: #f04646;
+  height: 50px;
+
+  margin-left: 20px;
+  border-radius: 25px;
+
+}

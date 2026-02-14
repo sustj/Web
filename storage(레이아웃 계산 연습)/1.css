@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* 절대 단위 */
+/*  1) 자식 width: ??px
+- 부모 width: 1440px
+- 자식 4개, 여백 3개
+- 자식 width: ??px, 여백 16px
+
+②자식(아이템) width값 = {①임의의 부모 width값 - (⑤자식(아이템) 여백 margin값 * ④자식(아이템) 여백 개수)} / ③자식(아이템) 개수
+= ?? = {1440 - (16 * 3)} / 4 = 348
+
+--> 자식 width = 348px */
+
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.list_wrapper {
+  margin: 0 auto;
+  width: 1440px;
+  border: 3px solid aqua;
+}
+
+.list_wrapper > * {
+  box-sizing: border-box;
+}
+
+.list-item {
+  float: left;
+  width: 348px;
+  border: 1px solid red;
+}
+
+.list-item:not(:nth-child(4n+1)) {
+  margin-left: 16px;
+}
+
+.list-item:not(:nth-child(-n+4)) {
+  margin-top: 50px;
+}
+
+
+.list-item__img {
+  border: 1px solid blue;
+  width: 100%;
+  height: 400px;
+}
+

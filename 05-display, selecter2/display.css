@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+* {
+  background-color: hsla(0, 100%, 50%, 0.063);
+}
+
+h1 {
+  color: blue;
+}
+
+#inline {
+  color: green;
+}
+
+h3, p, pre {
+  width: 500px;
+  height: 100px;
+}
+
+a, img, span {
+  width: 100px;
+  height: 100px;
+}
+
+/* h3:nth-of-type(1) { 
+   display : inline 
+} */
+
+.block > *:nth-child(1) {
+  display: inline;
+}
+
+.block span {
+  color : red;
+}
+
+h2 + h3 {
+  background-color: #0000ff30;
+}
+
+h2 ~ h3 {
+  background-color: #0000ff50;
+}
+
+/* 선택자 우선 순위 */
+/* 1) 기본 선택자 */
+/* 태그명 */
+img {
+  width : 100px;
+}
+/* #아이디명 */
+#inline {
+  width : 200px;
+}
+/* .클래스명 */
+.block {
+  width : 300px;
+}
+
+/* *{} 전체선택자 */
+* {
+  width : 400px;
+}
+
+/* (선택자), (선택자) {} : 그룹선택자 */
+h1, .block {
+  width : 500px;
+}
+
+/* (선택자) > (직계 자식) : 자식선택지 */
+.block > h2 {
+  width : 600px;
+}
+
+/* (선택자) (직계 자식 or 후손) : 후손선택자 */
+.block h3 {
+  width : 700px;
+}
+/* (선택자1) + (선택자2) : 인접선택자 */
+h2 + p {
+  width : 800px;
+}
+/* (선택자1) ~ (선택자2) : 형제선택자 */
+h2 ~ pre {
+  width : 900px;
+}
+
+/* ----------------------------------------------------- */
+
+
+/* 2) 가상 클래스 선택자 - 위치(순서) 관련 */
+h3:nth-of-type(2) {
+  width : 1000px;
+}
+/* 형제 + 같은 태그 기준 선택 */
+/* 선택자 : first-of-type, last-of-type, nth-of-type */
+
+/* 형제 기준 선택 */
+/* 선택자 : first-child, last-child, nth-child */
+
+/* ----------------------------------------------------- */
+
+/* 3) 속성 선택자 */
+/* 선택자[속성명] */
+img[alt] {
+  border : 5px solid red;
+}
+
+/* [class] : class 속성을 가진 태그 */
+div[class] {
+  border : 5px solid purple;
+}
+/* [id] : id 속성을 가진 태그 */
+div[id] {
+  border : 5px solid black;
+}
+/* [alt] : alt 속성을 가진 태그 */
+img[alt] {
+  border : 5px solid red;
+}
+
+/* ________________________________ */
+
+/* 선택자[속성명="속성값"] */
+img[alt="icon"] {
+  border : 5px solid blue;
+}
+/* 선택자[속성명~="속성값"] */
+img[alt~="icon"] {
+  border : 5px solid green;
+}
+/* 선택자[속성명|="속성값"] */
+img[alt|="icon"] {
+  border : 5px solid orange;
+}

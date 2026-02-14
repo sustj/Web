@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* [CSS 작성 순서(수업 기준)] */
+/* 
+1. 위치(배치)/정렬
+2. 사이즈/여백
+3. 폰트/컬러 관련
+4. 기타
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 부모 */
+ul.box, .absolute_test {
+  width: 500px;
+  height: 500px;
+}
+
+ul[class*="box"]:nth-of-type(1) {
+  background-color: #f0f0f0;
+}
+
+ul[class*="box"]:nth-of-type(2) {
+  background-color: #000;
+}
+
+ul[class*="box"]:nth-of-type(3) {
+  background-color: #EE2658;
+}
+
+ul[class*="box"]:nth-of-type(4) {
+  background-color: #fede12;
+}
+
+/* 자식 */
+.box li {
+  width: 100px;
+  height: 80px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+/* 속성값 테스트 */
+ul[class*="box"]:nth-of-type(1) .red {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  z-index: 0;
+  margin-left: 20px;
+}
+
+ul[class*="box"]:nth-of-type(1) .blue{
+  position: relative;
+  bottom: 30px;
+  z-index: 1;
+}
+
+ul[class*="box"]:nth-of-type(2) .blue {
+  position: absolute;
+  opacity: 50%;
+  top: 0;
+  right: 0;
+}
+
+.absolute_test {
+  border: 1px solid aqua;
+  position: relative;
+ }
+
+ul[class*="box"]:nth-of-type(3) .green {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); /* (X축, Y축) */
+}
+
+ul[class*="box"]:nth-of-type(4) .orange {
+  position: sticky;
+  bottom: 10px;
+}

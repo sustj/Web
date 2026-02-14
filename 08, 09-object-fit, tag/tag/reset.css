@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* reset.css vs. normalize.css */
+/* reset.css: 브라우저 기본 스타일을 제거하여 일관성 있는 디자인을 제공 -> 아예 초기화 */
+/* normalize.css: 브라우저 기본 스타일을 보존하면서 일관성을 유지 */
+
+html {
+  /* 스크롤 부드럽게 이동 */
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0; /* 여백 제거 */ 
+  /* body, h1~h6, p, ul, ol, li, table, th, td 등 */
+
+  padding: 0; /* 안쪽 여백 제거 */
+  /* ul, ol, th, td, input, fieldset, button, textarea, select, ... 등 */
+
+  /* 리스트 태그(li)의 기본 마커(볼릿, 숫자 등) 제거 */
+  list-style: "none"; /* 리스트 스타일 제거 */
+
+
+  /* 미디어 요소의 하단 여백 제거 */
+  vertical-align: top; /* 인라인 요소의 수직 정렬을 위쪽으로 맞춤 */
+}
+
+
+a {
+  color: inherit; /* 부모 요소의 글자색 상속 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+

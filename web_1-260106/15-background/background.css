@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* 
+[CSS 작성 순서 (수업 기준)]
+1. 위치(배치)/정렬
+2. 사이즈/여백
+3. 폰트/컬러 관련
+4. 기타
+*/
+
+h1 ~ div {
+  margin-top: 40px;
+}
+h3 {
+  margin-top: 15px;
+}
+
+div[id], div[style] {
+  width: 500px;
+  height: 350px;
+  
+  border: 3px solid aqua;
+}
+
+/* background-color */
+#background-color {
+  background-color: red;
+}
+
+/* background-image */
+#background-image {
+  background-image: url('../img/banner.jpg');
+}
+
+.bg {
+  background-image: url('../img/image_in.jpg');
+  background-repeat: no-repeat;
+}
+
+
+/* background-repeat ------------------ */
+#background-repeat__repeat {
+  background-repeat: repeat;
+}
+#background-repeat__no-repeat {
+  background-repeat: no-repeat;
+}
+#background-repeat__repeat-x {
+  background-repeat: repeat-x;
+}
+#background-repeat__repeat-y {
+  background-repeat: repeat-y;
+}
+
+
+/* background-position ------------------  */
+#background-position__center {
+  background-position: center;
+}
+#background-position__right {
+  /* 좌표 속성 하나만 적용 시, 반대 방향은 기본 중앙 */
+  background-position: right;
+  background-position: top;
+  /* 두 자리로 수평/수직 방향 동시 제어 가능 */
+  background-position: right top;
+}
+#background-position__px {
+  background-position: 10px 20px; /* x축 y축 */
+  background-position: 50px; /* x축 (y축 기본 중앙) */
+}
+#background-position__per {
+  background-position: 20% 20%; /* x축 y축 */
+  background-position: 20%; /* x축 (y축 기본 중앙) */
+}
+
+
+/* background-size ------------------  */
+#background-size__cover {
+  background-size: cover;
+  /* background-position: center; */
+}
+#background-size__contain {
+  background-size: contain;
+}
+#background-size__px {
+  background-size: 200px;
+}
+#background-size__per {
+  background-size: 50%;
+  /* 영역 기준 상대값 */
+}
+
+
+/* background-attachment ------------------ */
+#background-attachment__scroll {
+  background-attachment: scroll;
+}
+#background-attachment__fixed {
+  background-attachment: fixed;
+  background-position: left;
+}
+#background-attachment__local {  
+  height: 100px;
+  font-size: 2rem;
+  overflow-y: scroll;
+  background-attachment: local;
+}
+
+
+/* background-clip ------------------ */
+div[id*="background-clip"] {
+  padding: 50px;
+  background-position: center;
+  background-size: cover;
+  /* box-sizing: border-box; */
+  border:20px solid #ff000020;
+}
+#background-clip__border-box {
+  background-clip: border-box;
+}
+#background-clip__padding-box {
+  background-clip: padding-box;
+}
+#background-clip__content-box {
+  background-clip: content-box;
+}
+
+
+/* background-origin ------------------ */
+div[id*="background-origin"] {
+  padding: 50px;
+  background-position: center;
+  background-size: cover;
+  /* box-sizing: border-box; */
+  border:20px solid #ff000020;
+}
+
+#background-origin__border-box {
+  background-origin: border-box;
+}
+
+#background-origin__padding-box {
+  background-origin: padding-box;
+}
+
+#background-origin__content-box {
+  background-origin: content-box;
+}
+
+
+/* background: -gradient() ------------------ */
+#background__linear-gradient {
+  background: linear-gradient(90deg, #fff, #000);
+}
+
+#background__radial-gradient {
+  background: radial-gradient(#fff, #000);
+}
+
+#background__conic-gradient {
+  background: conic-gradient(#fff, #000);
+}
+
+
+
+/* background-blend-mode ------------------ */
+
+#background-blend-mode__multiply {
+  /* background-image: url('../img/product_musinsa/product_musinsa-3.webp'); */
+  background-blend-mode: multiply;
+  background-color: red;
+}
+
+#background-blend-mode__screen {
+  /* background-image: url('../img/product_musinsa/product_musinsa-3.webp'); */
+  background-blend-mode: screen;
+  background-color: red;
+}

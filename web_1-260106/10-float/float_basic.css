@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+#float_wrap {
+  border: 1px solid red;
+}
+
+.text {
+  float: left;
+  width: 300px;
+  border:1px solid #444444;
+}
+
+.img {
+  float: left;
+}
+/* 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear:both;
+} */

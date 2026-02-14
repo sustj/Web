@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 폰트: Gowun Batang */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+.font_Gowun_Batang {
+  font-family: "Gowun Batang", serif;
+}
+
+/* 폰트: 지마켓산스 */
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+}
+
+/* 
+[CSS 작성 순서 (수업 기준)]
+1. 위치(배치)/정렬
+2. 사이즈/여백
+3. 폰트/컬러 관련
+4. 기타
+*/
+
+* {
+  /* 폰트 종류 */
+  font-family: "Gothic A1";
+}
+
+h1 {
+  font-family: 'GMarketSans';
+}
+
+p {
+  /* 폰트 크기 */
+  font-size: 20px;
+
+  /* 행간(줄간격) */
+  line-height: 1.5;
+
+  /* 자간(한글자 사이 간격) */
+  letter-spacing: -1px;
+
+  /* 단어 사이 간격(띄어쓰기 간격) */
+  word-spacing: 2px;
+
+  /* 폰트 굵기 */
+  font-weight: 500;
+
+  /* 폰트 기울임 */
+  /* font-style: italic; */
+
+  /* 텍스트 정렬 */
+  text-align: center;
+
+  /* 대소문자 변경 */
+  text-transform: uppercase;
+}
+
+span {
+  color:red;
+  background-color: blue;
+}
+
+/* font 축약형 예시 */
+p:nth-of-type(2) {
+  font: 700 27px/3 'GMarketSans';
+}

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.item {
+  width: 300px;
+  height: 300px;
+
+  margin-top: 30px;
+
+  background-color: aqua;
+
+  transition: transform 0.5s;
+}
+
+.transform__translate:hover {
+  /* transform: translate(-20%); */
+  /* transform: translateX(20%); */
+
+  /* transform: translate(x, y); */
+  transform: translate(20px, 20px);
+}
+
+.transform__scale:hover {
+  transform: scale(0.5);
+}
+
+.transform__rotate:hover {
+  transform: rotate(45deg);
+}
+
+.transform__skew:active {
+  transform: skew(45deg, 45deg);
+}

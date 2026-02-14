@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>카드형 레이아웃 연습 (float, 절대/상대 단위)</title>
+
+  <!-- [css] -->
+  <link rel="stylesheet" href="reset.css"> <!-- 초기화 css -->
+  <!-- <link rel="stylesheet" href="layout.css"> -->
+  <!-- <link rel="stylesheet" href="1.css"> -->
+  <!-- <link rel="stylesheet" href="2.css"> -->
+  <link rel="stylesheet" href="3.css">
+</head>
+<body>
+  <h1>카드형 레이아웃 연습 (float, 절대/상대 단위)</h1>
+  <!-- 
+  
+  [CSS] 레이아웃 관련 계산 (1) - 절대 단위
+
+  <1> 자식 width: ??px
+  - 부모 width: 1440px
+  - 자식 4개, 여백 3개
+  - 자식 width: ??px, 여백 16px
+
+  <2> 자식 width: ??px
+  - 부모 width: 1600px
+  - 자식 5개, 여백 4개
+  - 자식 width: ??px, 여백 10px
+
+  ==============================
+
+  [CSS] 레이아웃 관련 계산 (2) - 상대 단위
+
+  <1> 자식 width: ??% -> 348px
+  - 부모 width: 98%
+  - 자식 2개, 여백1개
+  - 자식 width: ??%, 여백 2%
+    
+  -->
+  <div id="wrap">
+    <div class="section_1">
+      <h2>BEST</h2>
+
+      <!-- ul -->
+      <div class="list_wrapper clearfix">
+        <!-- li -->
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/image_in.jpg" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-2.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-3.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-4.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-5.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-1.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-2.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-3.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-4.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-5.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-1.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-2.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-3.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-4.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="list-item">
+          <a href="javascript:;">
+            <div class="list-item__img">
+              <img src="../../img/product_musinsa/product_musinsa-5.webp" alt="상품 이미지">
+            </div>
+            <div class="list-item__inner">
+              <h3>상품명</h3>
+              <p>상품에 대한 설명</p>
+              <p><span>할인율</span>00,000원</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

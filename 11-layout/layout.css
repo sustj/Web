@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+/* 
+부모 width: 1660px
+
+자식(아이템)
+- width: 400px
+- margin: ??px
+- 개수: 4개
+- 여백 개수: 3개
+
+*계산법*
+{1660px - (400px * 4)} / 3 = (margin)
+
+
+* 픽셀은 소수점을 사용하지 않는 것이 좋음 * 
+
+*/
+
+
+
+* {
+  background-color: #00000010;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.section_1 {
+  text-align: center;
+}
+
+.section_1 > h2 {
+  margin: 50px 0 20px; /* 3자리 축약형: 상 좌우 하 */
+  font-size: 32px;
+}
+
+.list_wrapper {
+  width: 1660px; 
+  /* px는 고정사이즈 */
+
+  margin:0 auto;
+  border: 2px solid aqua;
+}
+
+.list-item {
+  float: left;
+  width: 400px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.list-itemz:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+.list-item:nth-child(-n+4) {
+  margin-top: 0;
+}
+
+.list-item__inner p > span {
+  color: red;
+}

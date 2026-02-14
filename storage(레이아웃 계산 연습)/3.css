@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+/* 상대 단위  */
+/* x1) 자식 width: ??%
+- 부모 width: 98%
+- 자식 2개, 여백 1개
+- 자식 width: ??%, 여백 2%
+
+?? = 98 / 2 = 49%
+
+--> 자식 width: 48% */
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.list_wrapper {
+  margin: 0 auto;
+  width: 98%;
+  border: 3px solid aqua;
+}
+
+.list_wrapper > * {
+  box-sizing: border-box;
+}
+
+.list-item {
+  float: left;
+  width: 49%;
+  border: 1px solid red;
+}
+
+.list-item:not(:nth-child(2n+2)) {
+  margin-right: 2%;
+}
+
+.list-item:not(:nth-child(-n+2)) {
+  margin-top: 50px;
+}
+
+
+.list-item__img {
+  border: 1px solid blue;
+  width: 100%;
+  height: 400px;
+}
+

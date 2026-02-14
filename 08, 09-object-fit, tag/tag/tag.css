@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+#video_tag video {
+  width: 400px;
+}
+
+#table_tag table {
+  width: 1000px;
+  border-collapse: collapse; /* 셀 긴 간격(여백)제거 */
+}
+
+#table_tag th {
+  text-align: left;
+  background-color: #232323;
+  color: #fff;
+}
+
+#table_tag th, table#table_tag td {
+  padding: 10px 20px; /* 상하값 좌우값 */
+  border: 1px solid #ccc;
+}
+
+#table_tag caption {
+  margin-bottom: 10px;
+}
+
+.shortcut {
+  display:inline-block; 
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+}
+
+/* 5주차 메모 읽어보기(참고) */
+div[id$="_tag"] {
+  margin-top: 50px;
+}
+
+.bottom_blank {
+  text-decoration: underline;
+}
+
+

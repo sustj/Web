@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+  name="viewport" -> 뷰포트 설정
+  content="width=device-width, -> 디바이스 화면 너비 기준으로 페이지 폭 설정
+  initial-scale=1.0" -> 페이지 처음 로딩 시, 확대/축소 비율 설정 (1.0 = 100%)
+  -->
+  <title>transform</title>
+
+  <link rel="stylesheet" href="transform.css">
+</head>
+<body>
+  <h1>transform</h1>
+  <p>이동, 크기, 각도(회전), 기울이기(비틀기) 등 변형 관련 속성  ※ 기존 위치 기준에서 변형됨</p>
+
+  <div class="transform">
+    <div class="item transform__translate"></div>
+    <p>translate: x, y, z, 3D 기준에서 이동 변형</p>
+
+    <div class="item transform__scale"></div>
+    <p>'가로, 세로, 3d' 비율로 크기 변형</p>
+
+    <div class="item transform__rotate"></div>
+    <p>2D, x, y, z, 3d 기준에서 회전 변형</p>
+
+    <div class="item transform__skew"></div>
+    <p>x, y 기준에서 기울기</p>
+  </div>
+</body>
+</html>
